@@ -344,6 +344,23 @@ function About() {
     </div>
   );
 }
+function Contact() {
+  return (
+    <div className="max-w-3xl mx-auto px-5 py-16">
+      <h1 className="font-black text-3xl text-[#14181C] mb-6">Contact Us</h1>
+      <p className="text-[#3F4A52] mb-8">Have a question or need a quick response from our sales team? Reach out directly.</p>
+      <div className="space-y-3 text-sm mb-8">
+        <div className="flex items-center gap-3"><MapPin size={17} className="text-[#E8A23D]" /> KK 46 Ave, Kigali, Rwanda</div>
+        <div className="flex items-center gap-3"><Phone size={17} className="text-[#E8A23D]" /> +250 252 510 138</div>
+        <div className="flex items-center gap-3"><Mail size={17} className="text-[#E8A23D]" /> sales@rwandaplastic.rw</div>
+      </div>
+      <div className="flex gap-2">
+        <Btn variant="dark"><MessageCircle size={15} /> WhatsApp</Btn>
+        <Btn variant="ghost"><Phone size={15} /> Call Us</Btn>
+      </div>
+    </div>
+  );
+}
 function SimplePage({ title, body }) {
   return <div className="max-w-3xl mx-auto px-5 py-16"><h1 className="font-black text-3xl text-[#14181C] mb-6">{title}</h1><p className="text-[#3F4A52] leading-relaxed whitespace-pre-line">{body}</p></div>;
 }
@@ -783,6 +800,7 @@ export default function App() {
     "quote-success": <QuoteSuccess setRoute={setRoute} lastQuoteId={lastQuoteId} />,
     custom: <CustomSolutions session={session} submitCustomRequest={submitCustomRequest} />,
     about: <About />,
+    contact: <Contact />,
     faq: <SimplePage title="FAQ" body={"What is the minimum order quantity?\nMOQ varies by product, shown on each product page.\n\nHow long does delivery take?\nMost Kigali orders arrive within 2-3 business days; upcountry up to 5.\n\nCan I request custom dimensions or colours?\nYes — use Custom Solutions.\n\nWhat payment methods are supported?\nMobile Money, bank transfer, card, and cash on delivery for approved accounts."} />,
     privacy: <SimplePage title="Privacy Policy" body={"Rwanda Plastic Industries Ltd collects only the information necessary to process quotations, orders and deliveries, stored securely in a managed database with role-based access controls."} />,
     terms: <SimplePage title="Terms of Service" body={"By placing an order or requesting a quotation, you agree to our standard trading terms including pricing validity, delivery timelines, and payment terms confirmed on each quotation."} />,
