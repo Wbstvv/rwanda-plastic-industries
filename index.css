@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3 { font-family: 'Archivo', sans-serif; }
+.font-mono { font-family: 'IBM Plex Mono', monospace; }
+.in { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid rgba(20,24,28,0.15); border-radius: 6px; font-size: 0.875rem; outline: none; background: #fff; }
+.in:focus { border-color: #E8A23D; }
